@@ -1,0 +1,31 @@
+package func;
+
+public class Main {
+
+	public static int function(int a,int b,int c) {
+		int min;
+		
+		if(a > b) {
+			min = b;
+		}
+		else if(a > c) {
+			min = c;
+		}
+		else {
+			min = a;
+		}
+		for(int i=min; i > 0; i--) {
+			if(i % a == 0 && i % b == 0 && i % c == 0) {
+				return i;
+			}
+		}
+		
+		return 1;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(function(400,300,750));
+		
+	}
+
+}
